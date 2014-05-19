@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_com_univman_information_Information" modelAttribute="information" path="/informations" versionField="Version" z="o6XkMHKxnoQ3E7m3dBMnzsTIN4M=">
+        <field:input field="title" id="c_com_univman_information_Information_title" required="true" z="XASFsUJbl5UrsK6aZ2lDGfk53JU="/>
+        <field:datetime dateTimePattern="${information_informationdate_date_format}" field="informationDate" id="c_com_univman_information_Information_informationDate" z="B7kxL4ehShRjfNNv/yeNIkiW8AA="/>
+        <field:input field="body" id="c_com_univman_information_Information_body" required="true" z="no8AahC697Io0/8HgZd/Bmd9zkg="/>
+    </form:update>
+</div>

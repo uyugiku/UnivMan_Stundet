@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:menu="urn:jsptagdir:/WEB-INF/tags/menu" xmlns:sec="http://www.springframework.org/security/tags" id="menu" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <menu:menu id="_menu" z="nZaf43BjUg1iM0v70HJVEsXDopc=">
+        <sec:authorize access="hasRole('student')">
+            <menu:category id="c_student" z="VA/5j81jpINYUQQoxpb8LUYLpWk=">
+                <menu:item id="i_student_edit" messageCode="global_menu_edit" url="/students/edit" z="user-managed"/>
+            </menu:category>
+        </sec:authorize>
+        <sec:authorize access="hasRole('finishedstudent')">
+            <menu:category id="c_finishedstudent" z="qJKz21vsSHAd3Bqh+zKevse7yOY=">
+                <menu:item id="i_finishedstudent_edit" messageCode="global_menu_edit" url="/finishedstudents/edit" z="user-managed"/>
+            </menu:category>
+        </sec:authorize>
+        <menu:category id="c_information" z="Dj7TIdWbuduwiEHddZlWtY45LSw=">
+            <menu:item id="i_information_list" messageCode="global_menu_list" url="/informations?page=1&amp;size=${empty param.size ? 10 : param.size}" z="QGEcGfb2QECwGBvoCLE0t5WzD7M="/>
+        </menu:category>
+    </menu:menu>
+</div>

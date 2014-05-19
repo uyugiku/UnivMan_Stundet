@@ -1,0 +1,27 @@
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-05-10 14:28:01
+project --topLevelPackage com.univman --projectName Student --java 7 --packaging JAR
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-05-10 14:28:42
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-05-10 14:29:14
+web mvc setup
+jpa setup --database MYSQL --provider HIBERNATE --hostName localhost --databaseName spring --userName root --password kurumano1177
+entity jpa --class ~.student.Student --testAutomatically 
+field string --fieldName name --notNull 
+field string --fieldName mail --notNull 
+field boolean --fieldName finished
+web mvc all --package com.univman.student
+entity jpa --class ~.finishedstudent.FinishedStudent --testAutomatically --table studentm
+field string --fieldName name --notNull 
+field string --fieldName mail --notNull 
+field boolean --fieldName finished
+web mvc all --package com.univman.finishedstudent
+entity jpa --class ~.information.Information --testAutomatically 
+field string --fieldName title --notNull 
+// [failed] field date --fieldName Date --type java.util.Date
+field date --fieldName informationDate --type java.util.Date
+field string --fieldName body --notNull 
+web mvc all --package com.univman.information
+security setup
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-05-10 20:58:38
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log opened at 2014-05-12 02:41:40
+focus --class ~.finishedstudent.FinishedStudent
+// Spring Roo 1.2.5.RELEASE [rev 8341dc2] log closed at 2014-05-12 03:06:03
